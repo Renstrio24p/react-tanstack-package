@@ -1,3 +1,5 @@
+"use client";
+
 import { useFetchPost } from "~/hooks";
 import { ThemeToggle } from "~/lib/components";
 

@@ -1,4 +1,4 @@
-import { useSuspenseQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { httpService } from "~/services";
 
 type Props = {
@@ -31,7 +31,7 @@ export const useNewQuery = <T,>({
 }: Props) => {
     const queryKey = ["query", key, id, name, title].filter(Boolean);
 
-    return useSuspenseQuery<T>({
+    return useQuery<T>({
         queryKey,
         queryFn: async (): Promise<T> => {
             try {

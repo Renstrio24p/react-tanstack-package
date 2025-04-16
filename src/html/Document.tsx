@@ -11,7 +11,7 @@ export function RootDocument({
         <HeadContent />
       </head>
       <body>
-        <ScriptOnce>
+        <ScriptOnce log={false}>
           {`document.documentElement.classList.toggle(
             'dark',
             localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
